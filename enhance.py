@@ -1,7 +1,7 @@
 import librosa
 import numpy as np
 from scipy.io.wavfile import write
-import noisereduce
+# import noisereduce
 
 def adjust_decibel_level(file_path, decibel_level, output_file):
     # Load audio file
@@ -23,7 +23,7 @@ def adjust_decibel_level(file_path, decibel_level, output_file):
     write(output_file, sample_rate, audio)
 
 # Example usage:
-input_file = '/content/drive/MyDrive/audio1.wav'
-output_file = '/content/drive/MyDrive/output_channels/output2.wav'
-decibel_level = 40  # adjust this value to your liking
+input_file = './audios/silent_output.wav'
+output_file = './audios/silent_output2.wav'
+decibel_level = 35  # adjust this value to your liking
 adjust_decibel_level(input_file, decibel_level, output_file)
